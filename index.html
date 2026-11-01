@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- 카카오톡 공유 썸네일 및 미리보기를 위한 Open Graph 태그 추가 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="예은침례교회 주일 예배 스터디 카드 - 에벤에셀의 하나님">
+    <meta property="og:description" content="사무엘상 7:12 | 실패와 침묵의 자리마저도, 마음을 쏟아놓을 때 은혜와 승리의 에벤에셀로 바뀝니다.">
+    <!-- 안정적인 유튜브 썸네일(hqdefault.jpg) 주소 적용 완료 -->
+    <meta property="og:image" content="https://img.youtube.com/vi/7XaFqtFBeKg/hqdefault.jpg">
+    
+    <title>예은침례교회 주일 예배 스터디 카드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #4a90e2; --primary-light: #e1f0fc; --primary-dark: #2a5a8a;
+            --bg: #f1f5f9; --app-bg: #f8fafc; 
+        }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; } 
+        body { background-color: var(--bg); margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100dvh; font-family: 'Noto Sans KR', sans-serif; overflow: hidden; }
+        .app-container { width: 100vw; height: 100dvh; background-color: var(--app-bg); display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; }
+        .app-container::-webkit-scrollbar { display: none; }
+        @media (min-width: 768px) { .app-container { width: 450px; height: 90vh; border-radius: 2.5rem; border: 10px solid #1e293b; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3); } }
+        
+        .slide-section { flex: 0 0 100%; width: 100%; height: 100%; scroll-snap-align: start; scroll-snap-stop: always; display: flex; flex-direction: column; position: relative; overflow: hidden; background: white; }
+        .section-content { flex: 1; overflow-y: auto; padding: 3rem 1.5rem 2rem 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+        .section-content::-webkit-scrollbar { display: none; }
+        
+        .nav-footer { flex-shrink: 0; padding: 1.2rem 1.5rem; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(15px); display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid #e2e8f0; z-index: 40; }
+        .btn-nav { padding: 0.9rem 1rem; border-radius: 1.2rem; font-weight: 700; font-size: 0.95rem; flex: 1; text-align: center; cursor: pointer; border: none; transition: 0.3s; }
+        .btn-next { background-color: var(--primary); color: white; }
+        .btn-prev { background-color: #f1f5f9; color: #64748b; border: 1px solid #e2e8f0; }
+        
+        .detail-text { font-size: 1.15rem; line-height: 1.8; color: #334155; word-break: keep-all; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; border-radius: 1rem; overflow: hidden; background: #000; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .video-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
+        
+        .badge { display: inline-block; padding: 0.3rem 0.8rem; background-color: var(--primary-light); color: var(--primary-dark); font-weight: 700; border-radius: 2rem; font-size: 0.85rem; margin-bottom: 1rem; }
+        .card { background: white; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); border: 1px solid #f1f5f9; }
+        
+        .mask-word { background: #e2e8f0; color: #e2e8f0; padding: 0 4px; border-radius: 4px; cursor: pointer; transition: 0.3s; }
+        .mask-word:active { background: transparent; color: var(--primary-dark); font-weight: bold; }
+
+        @media print {
+            body, html { background: white !important; overflow: visible !important; height: auto !important; }
+            .app-container { display: block !important; width: 100% !important; border: none !important; box-shadow: none !important; }
+            .slide-section { page-break-after: always !important; height: auto !important; display: block !important; border-bottom: 1px solid #eee; padding-bottom: 2rem; }
+            .nav-footer, .btn-nav { display: none !important; }
+            .section-content { padding: 1rem 0 !important; overflow: visible !important; }
+            .card { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container" id="app">
+
+        <!-- Section 1: 타이틀 및 영상 -->
+        <div class="slide-section" id="sec1">
+            <div class="section-content">
+                <div>
+                    <span class="badge">예은침례교회 2026. 11. 1</span>
+                    <h1 class="text-3xl font-bold text-gray-800 font-[Nanum_Myeongjo] leading-tight mb-2">에벤에셀의 하나님</h1>
+                    <p class="text-gray-500 font-medium">본문: 사무엘상 7:2-13</p>
+                </div>
+                <div class="video-wrapper mt-4">
+                    <iframe src="https://www.youtube.com/embed/7XaFqtFBeKg" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="card mt-4 bg-[var(--primary-light)] border-none">
+                    <p class="text-[var(--primary-dark)] font-bold text-center">"우리의 가장 큰 실패의 자리마저도 구속하시어 은혜의 기념비로 바꾸시는 에벤에셀의 하나님을 찬양합니다."</p>
+                </div>
+            </div>
+            <div class="nav-footer">
+                <button class="btn-nav btn-next w-full" onclick="scrollToSec('sec2')">설교 강해 보기 ➔</button>
+            </div>
+        </div>
+
+        <!-- Section 2: 설교 강해 요약 -->
+        <div class="slide-section" id="sec2">
+            <div class="section-content">
+                <span class="badge">Sermon Outline</span>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-[var(--primary)] pb-2 inline-block mb-4">설교 강해</h2>
+                
+                <div class="space-y-4">
+                    <div class="card">
+                        <h3 class="font-bold text-lg mb-1">서론: 이십 년의 긴 침묵</h3>
+                        <p class="text-gray-600">하나님의 궤가 시골 마을에 방치되었던 20년의 긴 세월은 겉보기엔 침묵의 시간이었습니다. 하지만 그 시간은 백성들의 마음속에 여호와를 향한 깊은 '사모함'이 싹트는, 보이지 않는 은혜의 기간이었습니다.</p>
+                    </div>
+                    <div class="card border-l-4 border-[var(--primary)]">
+                        <h3 class="font-bold text-lg mb-1">Point 1. 에벤에셀, 패배의 이름 (삼상 4장)</h3>
+                        <p class="text-gray-600">이십 년 전, 이스라엘은 에벤에셀에서 블레셋에게 처참하게 패배했습니다. 하나님께 마음을 돌이키지 않고, 언약궤라는 '물건'만을 부적처럼 앞세우며 하나님을 '이용'하려 했기 때문입니다. 그 결과는 '이가봇(영광이 떠남)'이라는 쓰라린 상처로 남았습니다.</p>
+                    </div>
+                    <div class="card border-l-4 border-[var(--primary)]">
+                        <h3 class="font-bold text-lg mb-1">Point 2. 미스바, 물을 쏟는 사람들 (삼상 7장)</h3>
+                        <p class="text-gray-600">이십 년 후, 사무엘의 외침에 백성들은 우상을 버리고 미스바에 모여 금식하며 회개합니다. '물을 쏟듯' 자신들의 죄를 핑계 없이 고백했습니다. 적군이 쳐들어오는 위기 앞에서도 그들은 언약궤 대신 '어린 양 번제'를 드리며 하나님만을 전적으로 의지했습니다.</p>
+                    </div>
+                    <div class="card border-l-4 border-[var(--primary)]">
+                        <h3 class="font-bold text-lg mb-1">Point 3. 다시 세운 돌, 에벤에셀</h3>
+                        <p class="text-gray-600">하나님께서 큰 우레로 적을 물리치시고 승리를 주십니다. 이십 년 전 패배의 상징이었던 에벤에셀은 이제 "여호와께서 여기까지 우리를 도우셨다"는 은혜와 승리의 기념비로 바뀌었습니다. 실패의 자리가 고백의 자리로 역전된 것입니다.</p>
+                    </div>
+                    <div class="card bg-gray-50">
+                        <h3 class="font-bold text-lg mb-1">결론: 우리의 영원한 에벤에셀, 십자가</h3>
+                        <p class="text-gray-600">미스바의 어린 양처럼, 하나님은 예수 그리스도를 세상 죄를 지고 갈 어린 양으로 보내셨습니다. 가장 처참한 패배 같았던 골고다 십자가는 우리를 끝까지 도우시는 영원한 에벤에셀이 되었습니다. 하나님은 우리의 실패와 침묵의 시간도 은혜의 돌로 세우십니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-footer">
+                <button class="btn-nav btn-prev" onclick="scrollToSec('sec1')">이전</button>
+                <button class="btn-nav btn-next" onclick="scrollToSec('sec3')">성서 주해 ➔</button>
+            </div>
+        </div>
+
+        <!-- Section 3: 성서학적 심층 주해 -->
+        <div class="slide-section" id="sec3">
+            <div class="section-content">
+                <span class="badge">Deep Exegesis</span>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-[var(--primary)] pb-2 inline-block mb-4">본문 깊이 읽기</h2>
+                <div class="card">
+                    <p class="detail-text">사무엘상 4장과 7장에 등장하는 '에벤에셀'은 이스라엘 신앙의 결정적 전환을 보여주는 신학적 장치입니다. 4장의 이스라엘은 언약궤라는 외형적 성물에 집착하는 주술적이고 기복적인 신앙(Magical Religion)에 빠져있었으며, 그 결과는 참담한 패배와 '이가봇(하나님의 영광이 떠남)'이었습니다. 그러나 20년의 뼈아픈 침묵 끝에 7장 미스바 성회에서 보여준 모습은 다릅니다. '물을 길어 여호와 앞에 붓는 행위'(7:6)는 생명의 근원이신 하나님 앞에 자신들의 전적인 무능함을 인정하고, 마음을 남김없이 쏟아놓는 전인격적인 회개(Repentance)를 상징합니다. 특히 다급한 적의 침공 앞에서도 무기를 들거나 궤를 앞세우지 않고 '어린 양 번제'를 드린 것은, 힘의 논리가 아닌 오직 여호와의 주권만을 의지하겠다는 신앙적 결단의 극치입니다. 이에 하나님은 이스라엘의 가장 큰 트라우마이자 실패의 자리였던 에벤에셀을, "여호와께서 여기까지 도우셨다"는 구속사적 은혜의 기념비로 재창조하십니다.</p>
+                </div>
+            </div>
+            <div class="nav-footer">
+                <button class="btn-nav btn-prev" onclick="scrollToSec('sec2')">이전</button>
+                <button class="btn-nav btn-next" onclick="scrollToSec('sec4')">원어 탐구 ➔</button>
+            </div>
+        </div>
+
+        <!-- Section 4: 원어 분석 -->
+        <div class="slide-section" id="sec4">
+            <div class="section-content">
+                <span class="badge">Lexicon</span>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-[var(--primary)] pb-2 inline-block mb-4">성서 원어 탐구</h2>
+                <div class="space-y-4">
+                    <div class="card"><div class="text-[var(--primary)] font-bold text-lg">에벤 하에제르 (אֶבֶן הָעֵזֶר)</div><div class="text-xl font-bold">도움의 돌</div><p class="text-gray-600">'에벤(돌)'과 '에제르(도움)'의 합성어로, 실패와 패배의 자리에서 하나님이 친히 개입하셔서 승리와 회복을 주셨음을 기념하는
